@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SQNA Stitchcraft</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+<!-- ICONS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+
+html{scroll-behavior:smooth;}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:#f8fafc;
+color:#333;
+line-height:1.6;
+}
+
+/* HEADER */
+
+header{
+background:white;
+padding:30px;
+text-align:center;
+border-bottom:1px solid #eee;
+}
+
+header h1{
+font-family:'Playfair Display',serif;
+font-size:46px;
+color:#22c55e;
+}
+
+header p{
+color:#555;
+}
+
+/* NAV */
+
+nav{
+display:flex;
+justify-content:center;
+gap:30px;
+padding:15px;
+background:white;
+flex-wrap:wrap;
+}
+
+nav a{
+text-decoration:none;
+color:#333;
+font-weight:500;
+transition:.3s;
+}
+
+nav a:hover{
+color:#22c55e;
+}
+
+/* HERO */
+
+.hero{
+height:85vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+background:linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),
+url("https://images.unsplash.com/photo-1581092334651-ddf26d9a09d0?auto=format&fit=crop&w=1600&q=80");
+background-size:cover;
+background-position:center;
+color:white;
+padding:20px;
+}
+
+.hero h2{
+font-family:'Playfair Display',serif;
+font-size:48px;
+}
+
+.hero p{
+margin-top:15px;
+font-size:20px;
+}
+
+.hero button{
+margin-top:25px;
+padding:15px 32px;
+background:#22c55e;
+border:none;
+color:white;
+font-size:16px;
+border-radius:6px;
+cursor:pointer;
+transition:.3s;
+}
+
+.hero button:hover{
+background:#16a34a;
+transform:scale(1.05);
+}
+
+/* SECTION */
+
+.section{
+max-width:1100px;
+margin:auto;
+padding:80px 20px;
+}
+
+.section h2{
+font-family:'Playfair Display',serif;
+text-align:center;
+margin-bottom:40px;
+font-size:36px;
+color:#16a34a;
+}
+
+/* SERVICES */
+
+.services{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:30px;
+}
+
+.card{
+background:white;
+padding:30px;
+border-radius:10px;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+transition:.4s;
+opacity:0;
+transform:translateY(30px);
+}
+
+.card:hover{
+transform:translateY(-8px);
+box-shadow:0 15px 35px rgba(0,0,0,.15);
+}
+
+.card h3{
+margin-bottom:10px;
+color:#16a34a;
+}
+
+/* PROCESS */
+
+.process{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:20px;
+text-align:center;
+}
+
+.step{
+background:white;
+padding:25px;
+border-radius:8px;
+box-shadow:0 8px 18px rgba(0,0,0,.07);
+}
+
+/* PORTFOLIO */
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.gallery img{
+width:100%;
+border-radius:10px;
+transition:.4s;
+}
+
+.gallery img:hover{
+transform:scale(1.05);
+}
+
+/* CONTACT */
+
+.contact{
+background:#f0fdf4;
+padding:60px 20px;
+text-align:center;
+}
+
+.contact h2{
+font-family:'Playfair Display',serif;
+color:#15803d;
+}
+
+form{
+max-width:500px;
+margin:30px auto;
+display:flex;
+flex-direction:column;
+gap:15px;
+}
+
+form input, form textarea{
+padding:12px;
+border-radius:6px;
+border:1px solid #ccc;
+font-family:'Poppins';
+}
+
+form button{
+padding:14px;
+background:#22c55e;
+color:white;
+border:none;
+border-radius:6px;
+cursor:pointer;
+}
+
+form button:hover{
+background:#16a34a;
+}
+
+/* FLOATING BUTTONS */
+
+.float-btn{
+position:fixed;
+right:25px;
+color:white;
+padding:15px;
+border-radius:50%;
+font-size:18px;
+text-decoration:none;
+box-shadow:0 5px 15px rgba(0,0,0,.2);
+}
+
+.messenger{bottom:25px;background:#0084ff;}
+.facebook{bottom:90px;background:#1877f2;}
+.email{bottom:155px;background:#ea4335;}
+
+/* FOOTER */
+
+footer{
+background:#111;
+color:white;
+text-align:center;
+padding:25px;
+margin-top:50px;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>SQNA Stitchcraft</h1>
+<p>Precision in Every Stitch</p>
+</header>
+
+<nav>
+<a href="#about">About</a>
+<a href="#services">Services</a>
+<a href="#process">Process</a>
+<a href="#portfolio">Portfolio</a>
+<a href="#contact">Contact</a>
+</nav>
+
+<section class="hero">
+<div>
+<h2>Professional Garment Manufacturing</h2>
+<p>Uniforms • Clothing Brands • Custom Apparel Production</p>
+<button onclick="location.href='#contact'">Start Your Production</button>
+</div>
+</section>
+
+<section id="about" class="section">
+
+<h2>About SQNA Stitchcraft</h2>
+
+<p style="text-align:center;max-width:800px;margin:auto;">
+Based in Tanza, Cavite, SQNA Stitchcraft specializes in high-quality garment manufacturing for businesses, clothing brands, and organizations. Founded in 2026, our mission is to deliver reliable apparel production while maintaining excellent craftsmanship.
+</p>
+
+</section>
+
+<section id="services" class="section">
+
+<h2>Our Services</h2>
+
+<div class="services">
+
+<div class="card">
+<h3>Uniform Manufacturing</h3>
+<p>Corporate, school, and restaurant uniforms produced with durable materials and consistent quality.</p>
+</div>
+
+<div class="card">
+<h3>Contract Sewing</h3>
+<p>Helping startup clothing brands manufacture their apparel designs.</p>
+</div>
+
+<div class="card">
+<h3>Custom Apparel Production</h3>
+<p>T-shirts, hoodies, shorts, loungewear, and other garment production.</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="process" class="section">
+
+<h2>Our Production Process</h2>
+
+<div class="process">
+<div class="step">Design Review</div>
+<div class="step">Sample Development</div>
+<div class="step">Fabric Cutting</div>
+<div class="step">Sewing & Assembly</div>
+<div class="step">Quality Inspection</div>
+</div>
+
+</section>
+
+<section id="portfolio" class="section">
+
+<h2>Our Work</h2>
+
+<div class="gallery">
+
+<img src="https://images.unsplash.com/photo-1523381294911-8d3cead13475">
+<img src="https://img.freepik.com/free-photo/shop-clothing-clothes-shop-hanger-modern-shop-boutique_1150-8886.jpg">
+<img src="https://img.freepik.com/free-photo/clothes-hanging_1339-3159.jpg">
+<img src="https://img.freepik.com/free-photo/still-life-with-classic-shirts-hanger_23-2150828581.jpg">
+
+</div>
+
+</section>
+
+<section id="contact" class="contact">
+
+<h2>Start Your Production</h2>
+
+<p>Send us your inquiry and we will reply within 24 hours.</p>
+
+<form action="https://formsubmit.co/sqna.stitchcraft@gmail.com" method="POST">
+
+<input type="hidden" name="_captcha" value="false">
+<input type="hidden" name="_subject" value="New Inquiry - SQNA Stitchcraft">
+<input type="hidden" name="_template" value="table">
+
+<input type="text" name="name" placeholder="Your Name" required>
+<input type="email" name="email" placeholder="Your Email" required>
+<textarea name="message" placeholder="Tell us about your project..." rows="5" required></textarea>
+
+<button type="submit">Send Inquiry</button>
+
+</form>
+
+<p>Email: sqna.stitchcraft@gmail.com</p>
+<p>Phone: 0995 245 9757</p>
+<p>Location: Tanza, Cavite Philippines</p>
+
+</section>
+
+<footer>
+<p>© 2026 SQNA Stitchcraft</p>
+</footer>
+
+<!-- FLOATING CONTACT -->
+
+<a class="float-btn messenger" href="https://m.me/61584998347666" target="_blank">
+<i class="fab fa-facebook-messenger"></i>
+</a>
+
+<a class="float-btn facebook" href="https://www.facebook.com/profile.php?id=61584998347666" target="_blank">
+<i class="fab fa-facebook-f"></i>
+</a>
+
+<a class="float-btn email" href="mailto:sqna.stitchcraft@gmail.com">
+<i class="fas fa-envelope"></i>
+</a>
+
+<script>
+
+const cards=document.querySelectorAll('.card');
+
+window.addEventListener('scroll',()=>{
+
+cards.forEach(card=>{
+
+const top=card.getBoundingClientRect().top;
+
+if(top<window.innerHeight-50){
+card.style.opacity="1";
+card.style.transform="translateY(0)";
+}
+
+});
+
+});
+
+</script>
+
+</body>
+</html>
